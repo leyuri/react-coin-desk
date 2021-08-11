@@ -20,6 +20,13 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const StyledTypography = styled(Typography)`
+    color: white;
+    text-decoration-line : none;
+`;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -215,8 +222,9 @@ export default function TopNavBar(props) {
       <CssBaseline />
       <AppBar className={classes.appbar}>
         <Toolbar>
-          <Typography variant="h6">CoinDesk</Typography>
-
+          <StyledTypography variant="h6" component={Link} to="/">
+            CoinDesk
+          </StyledTypography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Button>
