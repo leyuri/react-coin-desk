@@ -59,6 +59,8 @@ const columns = [
     },
 ];
 
+// params: 'GridCellParams', event: MouseEvent<React.MouseEvent>) => void,
+
 const rows = [
     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
@@ -89,7 +91,7 @@ const rows = [
     { id: 29, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-export default function DataGridDemo() {
+export default function CoinList() {
     return (
         <div style={{ height: 1000, width: '100%', marginTop: '20px', marginBottom: '20px' }}>
             <DataGrid
@@ -97,7 +99,7 @@ export default function DataGridDemo() {
                 columns={columns}
                 pageSize={100}
                 checkboxSelection
-                disableSelectionOnClick
+                disableSelectionOnClick={true}
             />
         </div>
     );
