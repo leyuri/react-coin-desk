@@ -26,10 +26,12 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
-   
   },
   grow: {
     flexGrow: 1,
+  },
+  appbar: {
+    background: 'black'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -211,10 +213,10 @@ export default function TopNavBar(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar>
+      <AppBar className={classes.appbar}>
         <Toolbar>
           <Typography variant="h6">CoinDesk</Typography>
-  
+
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Button>
