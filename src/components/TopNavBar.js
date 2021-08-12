@@ -180,8 +180,8 @@ export default function TopNavBar(props) {
             <Button>
               NFT
             </Button>
-            <Button>
-              portfolio
+            <Button component={Link} to="/news">
+              NEWS
             </Button>
             <IconButton
               edge="end"
