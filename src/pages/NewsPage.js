@@ -8,7 +8,7 @@ const NewsPage = () => {
         <div>
             <TopNavBar />
             <Container>
-                <NewsList  />
+                <NewsList />
             </Container>
         </div>
     )
