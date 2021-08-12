@@ -1,16 +1,16 @@
 import React from 'react'
 import TopNavBar from '../components/TopNavBar'
 import Container from '@material-ui/core/Container';
-import CoinList from '../components/CoinList';
+import ExchangeList from '../components/ExchangeList';
 
-const MainPage = () => {
+const ExchangesPage = () => {
     return (
         <div>
             <TopNavBar />
             <Container>
-                <CoinList className="mt-5" />
+                <ExchangeList  />
             </Container>
         </div>
     )
 };
-export default MainPage;
+export default ExchangesPage;

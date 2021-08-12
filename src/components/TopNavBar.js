@@ -227,10 +227,10 @@ export default function TopNavBar(props) {
           </StyledTypography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Button>
+            <Button component={Link} to="/:id">
               Cryptocurrencies
             </Button>
-            <Button>
+            <Button component={Link} to="/exchanges">
               Exchanges
             </Button>
             <Button>
