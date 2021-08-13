@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -5,8 +7,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-import { useSelector } from 'react-redux';
+import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import { useSelector } from 'react-redux';
 import StoreHelper from '../util/StoreHelper';
 
 const useStyles = makeStyles((theme) => ({
@@ -24,6 +27,12 @@ const useStyles = makeStyles((theme) => ({
         height: theme.spacing(7),
         marginRight: '20px'
     },
+    link: {
+        position: 'absolute',
+        right: '0px',
+        bottom: '0px',
+        marginRight: '10px'
+    }
 }));
 
 const NewsItem = ({ news }) => {
@@ -54,8 +63,11 @@ const NewsItem = ({ news }) => {
                                 {item.published_on}
                             </span>
                             <br></br>
-                            {/* {item.tags} */}
-                            {item.url}
+                            <div>
+                                <Link href={item.url} className={classes.link} color="inherit">
+                                    Go to detail
+                                </Link>
+                            </div>
                         </React.Fragment>
                     }
                 />
