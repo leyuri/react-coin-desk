@@ -13,6 +13,7 @@ import StoreHelper from '../util/StoreHelper';
 import { emphasize, withStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import HomeIcon from '@material-ui/icons/Home';
+import { FETCH_NEWS } from '../actions/index'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -111,11 +112,20 @@ const NewsList = () => {
     const stores = useSelector((state) => state.stores)
     const classes = useStyles();
     return (
-        <List className={classes.root}>
-            {stores.map((news, index) => {
-                return <NewsItem key={index} news={news} />
-            })}
-        </List>
+        // <List className={classes.root}>
+        //     {stores.map((news, index) => {
+        //         return <NewsItem key={index} news={news} />
+        //     })}
+        // </List>
+        // <div>
+        //     test
+        // </div>
+        <div>
+            <button onClick={FETCH_NEWS}>
+                test
+            </button>
+        </div>
+
     )
 }
 
