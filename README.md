@@ -1,5 +1,5 @@
 # react-coin-desk
-암호화페 시셰를 확인할 수 있는 웹앱 💸
+암호화페 시세를 확인할 수 있는 웹앱 💸
 
 ### Development environment
 - React.js
